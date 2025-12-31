@@ -3,7 +3,7 @@ import Container from "../components/Container";
 const Hero = () => {
   return (
     <Container>
-      <section className="relative h-[50vh] w-full overflow-hidden
+      <section className="relative h-[60vh] w-full overflow-hidden
         bg-[url('/images/HomePage_Image1.jpg')]
         bg-center bg-cover bg-no-repeat">
 
@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
 
       </section>
-      <div className="flex items-center justify-center px-8 py-4 text-[clamp(16px,2vw,24px)] shadow-lg max-w-5xl mx-auto ">
+      <div className="flex items-center justify-center px-8 py-4 text-[clamp(16px,2vw,24px)] font-semibold shadow-lg max-w-5xl mx-auto ">
         <p>Bridging Science & Engineering Talents with Industry
         </p>
       </div>

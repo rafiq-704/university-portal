@@ -11,8 +11,8 @@ const Button = ({ btnType, className, label, onClick }: ButtonProps) => {
       type="button"
       onClick={onClick}
       className={`
-        text-2xl px-16 py-4 rounded-lg cursor-pointer transition shadow-md
-        ${btnType === "secondary" ? "bg-[#ec3523]" : "bg-accent"}
+        text-lg md:text-2xl max-w-lg w-full px-16 py-4 rounded-lg cursor-pointer transition shadow-md 
+        ${btnType === "secondary" ? "bg-[#ec3523] hover:bg-[#ec3523]/80" : "bg-accent hover:bg-accent/80"}
         ${className}
       `}
     >

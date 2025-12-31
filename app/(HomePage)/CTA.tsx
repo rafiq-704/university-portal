@@ -5,7 +5,7 @@ import { redirectToExternal } from "../components/RedirectToExternal"
 
 const CTA = () => {
     return (
-        <Container className=" flex items-center justify-center">
+        <Container className=" flex items-center justify-center px-4 md:px-0">
             <Button label="Register Your Company" btnType="secondary" onClick={() => redirectToExternal("https://forms.gle/GKHJ9u1uvaA8n9vf6")} />
         </Container>
     )

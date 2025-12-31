@@ -4,7 +4,7 @@ import Container from "../components/Container"
 const Event = () => {
     return (
         <Container>
-            <section className="flex flex-col md:flex-row items-start jsutify-center gap-10">
+            <section className="flex flex-col md:flex-row items-start justify-center gap-10 px-4 md:px-0">
                 <div className="flex-1 flex items-start justify-center">
                     <Image
                         src="/images/HomePage_Image2.jpg"

@@ -3,10 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #006E4B;  /*dark emerald */
-  --secondary: #9F2B68 ; /* dark amaranth*/
-  --accent: #F2C57C; /* apricot cream*/
-  
+  --primary: #006E4B;
+  /*dark emerald */
+  --secondary: #9F2B68;
+  /* dark amaranth*/
+  --accent: #F2C57C;
+  /* apricot cream*/
+
 }
 
 @theme inline {

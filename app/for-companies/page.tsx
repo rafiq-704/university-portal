@@ -10,7 +10,7 @@ const Companies = () => {
   const infoSheetUrl = '';
   return (
     <Container>
-      <section className="flex items-start justify-center gap-10 border-black">
+      <section className="flex flex-col md:flex-row items-start justify-center gap-10 px-4 md:px-0">
         <div className="flex-1 flex flex-col items-start gap-4">
           <p className="text-[clamp(24px,4vw,48px)] font-bold tracking-[-0.4] text-primary">Direct Access to Life Sciences Talents</p>
           <div className="flex flex-col items-start gap-2">
@@ -72,7 +72,7 @@ const Companies = () => {
           <Image src='/images/companies/ForCompanies_Image1.jpg' alt="Companies image" width={400} height={400} className="w-full h-full object-cover shadow-2xl shadow-primary/40" />
         </div>
       </section>
-      <div className="flex items-center justify-center gap-4 mt-24">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-24 px-4 md:px-0">
         <Button label="Register Your Company" btnType="secondary" onClick={() => redirectToExternal(companyRegistrationUrl)} />
         <Button label="Information Sheet" btnType="accent" onClick={() => redirectToExternal(infoSheetUrl)} />
       </div>
