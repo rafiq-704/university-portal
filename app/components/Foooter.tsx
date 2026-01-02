@@ -7,7 +7,7 @@ const Footer = () => {
           <a href="mailto:careerday@bsse.ethz.ch" className="hover:underline">careerday@bsse.ethz.ch</a>
         </div>
         <div className="email flex items-center justify-end w-full text-xl p-4">
-          <a href="mailto:careerday@bsse.ethz.ch">Website By: Code Skardu</a>
+          {/* <a href="mailto:careerday@bsse.ethz.ch">Website By: </a> */}
         </div>
       </div>
     </footer>
