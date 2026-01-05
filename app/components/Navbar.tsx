@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="navbar max-w-7xl mx-auto w-full rounded-xl bg-primary h-18 flex items-center justify-start px-12 shadow-lg shadow-primary/20">
         <div className="flex items-center justify-start gap-6">
           {navbarData.map((item) => (
-            <a key={item.id} href={item.link} className={`text-white text-lg md:text-xl ${pathname === item.link ? "font-bold" : ""}`}>
+            <a key={item.id} href={item.link} className={`text-lg md:text-xl ${pathname === item.link ? "font-bold" : ""}`}>
               {item.name}
             </a>
           ))}

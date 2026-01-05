@@ -15,8 +15,8 @@ const Event = () => {
                     />
                 </div>
                 <div className="flex-1 flex flex-col gap-2">
-                    <p className="text-[clamp(24px,4vw,48px)] font-bold tracking-[-0.4] text-primary">The Event</p>
-                    <p className="text-[clamp(16px,2vw,18px)] font-bold leading-8 tracking-[1.5] text-gray-500">Situated in Basel, the hub of European Life Sciences, this full-day event connects students with leading innovators in the industry to explore the future of healthcare and technology.
+                    <p className="text-[clamp(24px,4vw,48px)] font-bold tracking-[-0.4] ">The Event</p>
+                    <p className="text-[clamp(16px,2vw,18px)] font-bold leading-8 tracking-[1.5] ">Situated in Basel, the hub of European Life Sciences, this full-day event connects students with leading innovators in the industry to explore the future of healthcare and technology.
                         Whether you are looking for your next career step or the brightest talents in the field, this is the place to be.
                         Join us at BSSE Career Day, where great connections and collaboration happen!</p>
                 </div>

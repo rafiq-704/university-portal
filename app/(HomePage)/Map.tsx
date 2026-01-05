@@ -7,11 +7,11 @@ const Map = () => {
             <section className="flex flex-col md:flex-row items-start justify-center gap-10 px-4 md:px-0">
                 <div className="flex-1 flex flex-col gap-4 items-start justify-start ">
                     <div className="flex items-center justify-center gap-2 ">
-                        <p className="text-[clamp(18px,2vw,24px)] font-bold tracking-[-0.4] text-primary">When:</p>
+                        <p className="text-[clamp(18px,2vw,24px)] font-bold tracking-[-0.4] ">When:</p>
                         <p className="text-[clamp(18px,2vw,24px)]">06 May 2026, 10:00 - 19:00</p>
                     </div>
                     <div className="flex items-center justify-center gap-2 ">
-                        <p className="text-[clamp(18px,2vw,24px)] font-bold tracking-[-0.4] text-primary">Where:</p>
+                        <p className="text-[clamp(18px,2vw,24px)] font-bold tracking-[-0.4] ">Where:</p>
                         <p className="text-[clamp(18px,2vw,24px)]">ETH Zürich (BSS), Klingelbergstrasse 48, 4056 Basel</p>
                     </div>
                 </div>
