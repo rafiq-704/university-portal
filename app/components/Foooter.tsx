@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-primary ">
+    <footer className="w-full bg-primary">
       <div className="flex flex-col items-center justify-center gap-10">
         <div className="email flex items-center justify-center py-6 text-xl">
           Contact us:<a href="mailto:careerday@bsse.ethz.ch" className="hover:underline">careerday@bsse.ethz.ch</a>

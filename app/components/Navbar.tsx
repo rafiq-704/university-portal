@@ -5,7 +5,7 @@ import { navbarData } from "./utils"
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log(pathname)
+  // console.log(pathname)
   return (
     <section className="flex items-center justify-center w-full mx-auto pt-4 md:pt-8 px-4 md:px-0">
       <div className="navbar max-w-7xl mx-auto w-full rounded-xl bg-primary h-18 flex items-center justify-start px-12 shadow-lg shadow-primary/20">
