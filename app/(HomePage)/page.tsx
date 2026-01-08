@@ -1,15 +1,15 @@
 import CTA from "./CTA";
 import Event from "./Event";
-import Hero from "./Hero";
-import Map from "./Map";
+import NewHero from "./NewHero";
 
  const HomePage = () => {
   return (
     <>
-      <Hero />
-      <Event/>
-      <Map/>
+      {/* <Hero /> */}
+      <NewHero/>  
       <CTA/>
+      <Event/>
+      {/* <Map/> */}
     </>
   );
 }

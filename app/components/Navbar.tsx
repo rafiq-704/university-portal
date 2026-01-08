@@ -1,24 +1,51 @@
-"use client"
+"use client";
 
 import { usePathname } from "next/navigation";
-import { navbarData } from "./utils"
+import { navbarData } from "./utils";
+import Button from "./Button";
+import Container from "./Container";
+import { redirectToExternal } from "./RedirectToExternal";
 
 const Navbar = () => {
   const pathname = usePathname();
-  // console.log(pathname)
+const studentRegisterLink = "https://docs.google.com/forms/d/e/1FAIpQLSccIGOw6OdoFilOep9MpkLOW12cJh_sOf2AVnK7t3102Yanmg/viewform";
   return (
-    <section className="flex items-center justify-center w-full mx-auto pt-4 md:pt-8 px-4 md:px-0">
-      <div className="navbar max-w-7xl mx-auto w-full rounded-xl bg-primary h-18 flex items-center justify-start px-12 shadow-lg shadow-primary/20">
-        <div className="flex items-center justify-start gap-6">
-          {navbarData.map((item) => (
-            <a key={item.id} href={item.link} className={`text-lg md:text-xl ${pathname === item.link ? "font-bold" : ""}`}>
-              {item.name}
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+    <section className="
+      fixed top-0 inset-x-0 z-50
+      h-16
+      bg-white/70
+      backdrop-blur-xl
+      border-b border-white/20
+      shadow-md shadow-black/5
+      flex items-center
+    ">
+      <Container>
+        <div className="flex h-full items-center justify-between">
+          <p className="font-bold text-[clamp(24px,4vw,32px)]">
+            BSSE Career Day 2026
+          </p>
 
-export default Navbar
+          <div className="flex items-center gap-10">
+            <div className="flex gap-6">
+              {navbarData.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.link}
+                  className={`text-lg transition-all duration-300 ${pathname === item.link
+                      ? "font-bold text-primary underline"
+                      : "text-gray-600 hover:text-primary hover:underline"
+                    }`}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+            <Button btnType="secondary" label="Register Now" onClick={()=> redirectToExternal(studentRegisterLink)}/>
+          </div>
+        </div>
+        </Container>
+    </section>
+  );
+};
+
+export default Navbar;
