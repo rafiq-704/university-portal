@@ -32,7 +32,7 @@ if(!selector) return;
         scrollTrigger: {
           trigger: el,         
           start: "top 80%",
-          markers: true
+          // markers: true
         },
       });
     });
