@@ -1,25 +1,45 @@
-export const sectionData = [
+export const textSections = [
   {
     id: 1,
-    title: "The Career Fair",
-    description:
-      "Explore exciting career paths in Life Sciences and biotechnology.\nMeet leading companies, gain industry insights, and expand your professional network.\nDiscover internships, thesis projects, and full-time opportunities tailored for students.",
-    image: "/images/students/student_banner.jpg",
-    chip: {
-      label: "Students",
-      color: "bg-blue-600",
-    },
+    title: "Who Should Attend",
+    intro: [
+      "This event is primarily tailored for the BSSE community, but open to all students interested in a career in Life Science.",
+    ],
+    list: [
+      "MSc Students: Find internships and early-career opportunities.",
+      "PhDs & Postdocs: Connect with R&D departments for your transition into industry.",
+      "Other ETH and external Students: Interested in Life Sciences? You are welcome to join us in Basel!",
+    ],
   },
   {
     id: 2,
-    title: "Optimize Your Profile",
-    description:
-      "Connect with highly motivated students and graduates from ETH Zürich.\nShowcase your organization, research, and career opportunities.\nBuild long-lasting relationships with the next generation of Life Science professionals.",
-    image: "/images/students/student_banner.jpg",
-    chip: {
-      label: "Companies",
-      color: "bg-yellow-600",
-    },
-    btn_label: "Register For CV Check",
+    title: "Explore the Biotech Ecosystem",
+    intro: [
+      "Walk the floor and immerse yourself in the biotech ecosystem.",
+      "The core of the Career Day is the exhibition area, where you can visit company booths ranging from global pharma giants to agile startups and meet their representatives. This is your chance to:",
+    ],
+    list: [
+      "Get insights into innovative Life Science R&D and business strategies.",
+      "Ask questions about workday structure.",
+      "Learn about internships and full-time positions.",
+      "Network directly with recruiters and industry representatives.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Career Support Activities",
+    list: [
+      "CV Checks: Get feedback from pros to make your application stand out.",
+      "Professional Photos: Update your LinkedIn profile with a free headshot.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Keynote & Networking Apéro",
+    intro: [
+      "We are thrilled to announce that the day will conclude with a special Keynote Address from a distinguished Guest Speaker, followed by a networking Apéro.",
+      "Don't miss this opportunity to hear direct insights from a leader in the field!",
+    ],
   },
 ];
+

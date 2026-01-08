@@ -1,11 +1,20 @@
+'use client';
 import Image from "next/image"
 import Container from "./Container"
+import {  useRef } from "react"
+import { useBoxAnimation } from "../hooks/useBoxAnimation";
 
 const Footer = () => {
+  const containerEl = useRef<HTMLDivElement>(null);
+  useBoxAnimation({
+      container: containerEl,
+      selector:".box",
+      y: 100
+  });
   return (
-    <footer className="w-full bg-primary">
+    <footer ref={containerEl} className="w-full bg-primary">
       <Container>
-        <div className="flex gap-10">
+        <div className="box flex gap-10">
           <div className="email w-full flex-1 flex flex-col items-start gap-3 text-xl h-full">
             <p className="text-2xl text-white font-semibold">Contact us</p>
             <div className="flex items-center gap-2">

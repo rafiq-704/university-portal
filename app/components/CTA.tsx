@@ -1,15 +1,23 @@
 'use client'
-import Button from "../components/Button"
-import Container from "../components/Container"
-import { redirectToExternal } from "../components/RedirectToExternal"
+import { useRef } from "react"
+import { useBoxAnimation } from "../hooks/useBoxAnimation"
+import Button from "./Button"
+import Container from "./Container"
+import { redirectToExternal } from "./RedirectToExternal"
+import Typography from "./Typography"
 
 const CTA = () => {
     const studentRegisterLink = "https://docs.google.com/forms/d/e/1FAIpQLSccIGOw6OdoFilOep9MpkLOW12cJh_sOf2AVnK7t3102Yanmg/viewform";
+    const containerEl = useRef<HTMLDivElement>(null);
+    useBoxAnimation({
+            container: containerEl,
+            y: 100
+        });
   return (
     <Container>
-        <section className="bg-linear-to-r from-primary/30 to-secondary/80 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 px-6 md:px-12 py-8 md:py-12">
-            <div className="flex-1 flex gap-2 flex-col text-center md:text-left">
-                <h2 className="text-[clamp(24px,4vw,32px)] font-bold">Ready to Elevate Your Career?</h2>
+        <section ref={containerEl} className="bg-linear-to-r from-primary/70 to-accent/60 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 px-6 md:px-12 py-8 md:py-12">
+            <div className="box flex gap-2 flex-col text-center md:text-left">
+                <Typography className="text-[clamp(32px,4vw,32px)]">Ready to Elevate Your Career?</Typography>
                 <p className="text-gray-500 text-md">Download the program guide or register your interest early.</p>
             </div>
             <div className="flex items-center gap-4">

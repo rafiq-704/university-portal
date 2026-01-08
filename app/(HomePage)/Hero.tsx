@@ -1,9 +1,18 @@
+'use client'
+import { useRef } from "react";
 import Container from "../components/Container";
+import useSplitText from "../hooks/useSplitText";
 
 const Hero = () => {
+
+  const containerEl =useRef<HTMLElement>(null);
+      useSplitText({
+          container: containerEl,
+          selector: ".split",
+      });
   return (
     <Container>
-      <section className="relative h-[60vh] w-full overflow-hidden
+      <section ref={containerEl} className="relative h-[60vh] w-full overflow-hidden
         bg-[url('/images/HomePage_Image1.jpg')]
         bg-center bg-cover bg-no-repeat">
 
@@ -32,7 +41,7 @@ const Hero = () => {
             clipPath: "url(#arrowClip)",
           }}
         >
-          <h1 className="text-[clamp(32px,4vw,64px)] font-bold tracking-[-0.4]">
+          <h1 className="split text-[clamp(32px,4vw,64px)] font-bold tracking-[-0.4]">
             BSSE Career Day 2026
           </h1>
 

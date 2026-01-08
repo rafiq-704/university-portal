@@ -1,47 +1,61 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { RefObject } from "react";
 
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
-interface useSpliteTextProps {
+interface UseSplitTextProps {
     selector: string;
-    container: RefObject<HTMLDivElement | null>;
-    x?: number;
-    y?: number;
-    type: "lines" | "words" | "chars";
-    stagger?: number,
+    container: RefObject<HTMLElement | null>;
+    type?: "chars" | "words" | "lines";
+    stagger?: number;
     duration?: number;
     ease?: string;
-    start?: string
+    start?: string;
 }
-gsap.registerPlugin(SplitText);
 
 export default function useSplitText({
     selector,
     container,
-    x,
-    y,
-    type,
-    stagger = 0.08,
-    duration,
-    ease = 'linear',
-    start = 'top 65%'
-}: useSpliteTextProps) {
+    type = "chars",
+    stagger = 0.04,
+    duration = 0.12,
+    ease = "none",
+    start = "top 70%",
+}: UseSplitTextProps) {
+    useGSAP(
+        () => {
+            if (!container.current) return;
 
-    useGSAP(() => {
-        if (!selector || !container) return;
-        const split = SplitText.create(selector, { type: type })
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: container.current,
-                start,
-                markers: true
-            }
-        })
-        const targetType = type === 'lines' ? split.lines : type === 'words' ? split.words : split.chars
-        tl.from(targetType, {
-            x, y, autoAlpha: 0, stagger, duration, ease
-        })
-    }, { scope: container })
+            const split = new SplitText(selector, {
+                type,
+                charsClass: "char",
+            });
+            const targets =
+                type === "lines"
+                    ? split.lines
+                    : type === "words"
+                        ? split.words
+                        : split.chars;
+
+            gsap.fromTo(
+                targets,
+                { autoAlpha: 0 },
+                {
+                    autoAlpha: 1,
+                    stagger,
+                    duration,
+                    ease,
+                    scrollTrigger: {
+                        trigger: container.current,
+                        start,
+                        once: true,
+                    },
+                }
+            );
+        },
+        { scope: container }
+    );
 }
