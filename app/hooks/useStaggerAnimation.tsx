@@ -9,12 +9,14 @@ export const useStaggerAnimation = ({
   container,
   selector,
   y = 40,
+  x = 0,
   duration = 0.8,
   ease = "power1.out",
 }: {
   container: React.RefObject<HTMLDivElement | null>;
   selector?: string | undefined;
   y?: number;
+  x?: number;
   duration?: number;
   ease?: string;
 }) => {
@@ -26,6 +28,7 @@ if(!selector) return;
     elements.forEach((el) => {
       gsap.from(el, {
         y,
+        x,
         opacity: 0,
         duration,
         ease,

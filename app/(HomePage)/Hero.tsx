@@ -12,7 +12,7 @@ const Hero = () => {
       });
   return (
     <Container>
-      <section ref={containerEl} className="relative h-[60vh] w-full overflow-hidden
+      <section ref={containerEl} className="relative w-full overflow-hidden
         bg-[url('/images/HomePage_Image1.jpg')]
         bg-center bg-cover bg-no-repeat">
 

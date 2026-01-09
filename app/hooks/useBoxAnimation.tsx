@@ -22,7 +22,7 @@ export const useBoxAnimation = ({
     start,
     selector,
     stagger= 0.2,
-    duration = 0.8,
+    duration = 1.2,
 }: UseBoxAnimationProps) => {
     return (
         useGSAP(() => {

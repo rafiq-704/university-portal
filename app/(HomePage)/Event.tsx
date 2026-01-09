@@ -23,8 +23,8 @@ const Event = () => {
     });
     const studentRegisterLink = "https://docs.google.com/forms/d/e/1FAIpQLSccIGOw6OdoFilOep9MpkLOW12cJh_sOf2AVnK7t3102Yanmg/viewform";
     return (
-        <Container className="">
-            <section ref={containerEl} className="flex flex-col md:flex-row items-center justify-center gap-10 px-4 md:px-0 ">
+        <Container className="py-12 md:py-24">
+            <section ref={containerEl} className="flex flex-col md:flex-row items-center justify-center gap-10 ">
                 <div className="box-1 flex-1 flex flex-col items-start gap-4">
                     {/* <p className="text-[clamp(24px,4vw,48px)] font-bold tracking-[-0.4] ">The Event</p> */}
                     <Typography className="text-[clamp(32px,4vw,72px)]">The Event</Typography>
@@ -34,7 +34,7 @@ const Event = () => {
                     <Button label="For Students" icon="/icons/arrow.svg" onClick={() => redirectToExternal(studentRegisterLink)} />
                 </div>
                 <div className="box-2 flex-1 flex flex-col items-start justify-center">
-                    <div className="flex gap-6 w-full items-center">
+                    <div className="flex gap-3 md:gap-6 w-full items-center">
                         <div className="w-full h-65 rounded-xl overflow-hidden shadow-2xl shadow-primary/20 group">
                             <Image
                                 src="/images/event-image-1.jpg"
@@ -56,7 +56,7 @@ const Event = () => {
                         </div>
                     </div>
 
-                    <div className="flex w-full mt-6 gap-6 items-center">
+                    <div className="flex w-full mt-6 gap-3 md:gap-6 items-center">
                         <div className="w-full h-65 rounded-xl overflow-hidden shadow-2xl shadow-primary/20 group">
                             <Image
                                 src="/images/event-image-3.jpg"

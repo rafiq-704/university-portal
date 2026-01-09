@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Container from "../components/Container";
 import { useRef } from "react";
-import { useBoxAnimation } from "../hooks/useBoxAnimation";
 import { textSections } from "./utils";
 import { useStaggerAnimation } from "../hooks/useStaggerAnimation";
 
@@ -17,7 +16,7 @@ const Sections = () => {
     });
     return (
         <section ref={container} className="flex flex-col items-center justify-center">
-            <Container className="flex flex-col items-center justify-center">
+            <Container className="flex flex-col items-center justify-center py-12 md:py-24">
                 <div className="split flex flex-col gap-20">
                     {textSections.map((section) => (
                         <div key={section.id} className="box flex flex-col">

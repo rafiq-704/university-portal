@@ -1,4 +1,5 @@
 import Banner from "./Banner"
+import ImageSection from "./ImageSection"
 import Sections from "./Sections"
 
 const page = () => {
@@ -6,7 +7,8 @@ const page = () => {
     <>
     <Banner/>
     {/* <WhyAttend/> */}
-    <Sections/>
+    {/* <Sections/> */}
+    <ImageSection/>
     {/* <TheGrandFinale/> */}
     {/* <CTA/> */}
     </>

@@ -14,8 +14,8 @@ const Button = ({ btnType, className, label, onClick, icon }: ButtonProps) => {
       type="button"
       onClick={onClick}
       className={`
-         px-4 py-2 relative cursor-pointer transition font-semibold inline-flex items-center gap-2 overflow-hidden group
-        ${btnType === "secondary" ? "bg-[#ec3523] hover:bg-[#ec3523]/80 text-white " : btnType === "accent" ? "bg-accent hover:bg-accent/80" : "border border-gray-300"}
+         px-4 py-2 relative cursor-pointer transition font-semibold inline-flex items-center gap-2 overflow-hidden group text-xs md:text-lg
+        ${btnType === "secondary" ? "bg-primary hover:bg-primary/80 text-white " : btnType === "accent" ? "bg-accent hover:bg-accent/80" : "border border-gray-300"}
         ${className}
       `}
     >

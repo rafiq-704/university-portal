@@ -15,11 +15,11 @@ export const textListOne = [
 
 const Detials = () => {
     const contaier = useRef<HTMLDivElement>(null);
-     useStaggerAnimation({
-            container: contaier,
-            selector: ".box",
-            y: 60,
-        });
+    useStaggerAnimation({
+        container: contaier,
+        selector: ".box",
+        y: 60,
+    });
     return (
         <section ref={contaier}>
             <Container>
@@ -29,7 +29,7 @@ const Detials = () => {
                     </p>
                     <ul className="">
                         {textListOne.map((item, index) => (
-                            <div className="box flex items-center gap-4  mb-4" key={index}>
+                            <div className="box flex items-start gap-4  mb-4" key={index}>
                                 <Image src="/icons/check_arrow.svg" alt="icon" width={24} height={24} />
                                 <li key={index} className="text-lg text-gray-500">{item}</li>
                             </div>
